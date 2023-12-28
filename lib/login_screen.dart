@@ -36,8 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
         password: ''));
 
     var results = await conn.query('''SELECT nome, login, senha 
-          FROM adm_funcionario_credencial 
-          INNER JOIN cad_funcionario using(idfuncionario)
+          
           WHERE login = '$login' AND senha = '$senha' ''');
     for (var row in results) {
       nome = row[0];
