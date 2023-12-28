@@ -29,11 +29,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
   login(String login, senha) async {
     final conn = await MySqlConnection.connect(ConnectionSettings(
-        host: '192.168.25.88',
-        port: 3306,
-        user: 'root',
-        db: 'lanali',
-        password: 'teste'));
+        host: '',
+        port: ,
+        user: '',
+        db: '',
+        password: ''));
 
     var results = await conn.query('''SELECT nome, login, senha 
           FROM adm_funcionario_credencial 
